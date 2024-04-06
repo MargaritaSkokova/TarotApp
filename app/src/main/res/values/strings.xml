@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TarotApp</string>
+    <string name="welcome_screen">Tarot Reading</string>
+    <string name="start_button">START</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="support">Поддержите разработчика 79810479690 тиньк</string>
+</resources>
