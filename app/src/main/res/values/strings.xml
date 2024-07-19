@@ -3,4 +3,18 @@
     <string name="welcome_screen">Tarot Reading</string>
     <string name="start_button">START</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="choice_button">More</string>
+    <string name="profile_button">PROFILE</string>
+    <string name="back_start_button">TO THE START</string>
+    <string name="nickname">Nickname:</string>
+    <string name="date_of_birth">Date of birth:</string>
+    <string name="date_of_first_login">First login:</string>
+    <string name="default_date">1970-01-01</string>
+    <string name="default_username">username</string>
+    <string name="save_button">Save</string>
+    <string name="username">username</string>
+    <string name="yyyy_mm_dd">YYYY-MM-DD</string>
+    <string name="tap_to_start">Tap to start</string>
+    <string name="weekly_reading">Weekly Reading</string>
+    <string name="daily_reading">Daily Reading</string>
 </resources>

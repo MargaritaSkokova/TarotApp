@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/back_space"
+    tools:context=".TarotReadingFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:layout_editor_absoluteX="16dp">
+
+        <ImageView
+            android:id="@+id/card1"
+            android:layout_width="158dp"
+            android:layout_height="260dp"
+            android:rotation="-20"
+            android:src="@drawable/fool"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/card2"
+            android:layout_width="158dp"
+            android:layout_height="260dp"
+            android:src="@drawable/death"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <ImageView
+            android:id="@+id/card3"
+            android:layout_width="158dp"
+            android:layout_height="260dp"
+            android:rotation="20"
+            android:src="@drawable/lovers"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cinzel"
+        android:text="MEANING"
+        android:textAlignment="center"
+        android:textColor="#D7C9DC"
+        android:textSize="52sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="16dp">
+
+            <TextView
+                android:id="@+id/text_meaning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="#977064B3"
+                android:fontFamily="@font/cormorant_medium"
+                android:text=""
+                android:textAlignment="gravity"
+                android:textColor="#D7C9DC"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/back_start_bitton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/cinzel"
+                android:text="@string/back_start_button"
+                android:layout_marginBottom="15dp"
+                android:textSize="26sp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

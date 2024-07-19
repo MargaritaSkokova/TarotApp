@@ -4,29 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
-    tools:context=".WelcomeFragment"
-    >
+    android:background="@drawable/back_new"
+    tools:context=".WelcomeFragment">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="290dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/cinzel"
         android:text="@string/welcome_screen"
         android:textColor="#D7C9DC"
-        android:textSize="48sp"
+        android:textSize="64sp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/welcome_start_button"
         android:layout_width="148dp"
         android:layout_height="60dp"
         android:fontFamily="@font/cinzel"
         android:includeFontPadding="true"
+        android:visibility="invisible"
         android:text="@string/start_button"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,6 +37,22 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.25" />
 
+    <Button
+        android:id="@+id/welcome_profile_button"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/cinzel"
+        android:includeFontPadding="true"
+        android:text="@string/profile_button"
+        android:visibility="invisible"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_start_button"
+        app:layout_constraintVertical_bias="0.0" />
+
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="36dp"
@@ -43,7 +60,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/star" />
+        app:srcCompat="@drawable/star_icon" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -53,7 +70,7 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/star" />
+        app:srcCompat="@drawable/star_icon" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -63,7 +80,7 @@
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/star" />
+        app:srcCompat="@drawable/star_icon" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -75,7 +92,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/star" />
+        app:srcCompat="@drawable/star_icon" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -85,7 +102,7 @@
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/star" />
+        app:srcCompat="@drawable/star_icon" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -105,8 +122,23 @@
         android:layout_height="199dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/welcome_start_button"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/star_outline" />
+
+    <TextView
+        android:id="@+id/text_shine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cormorant_light"
+        android:text="@string/tap_to_start"
+        android:textColor="#BCD7C9DC"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.13999999" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

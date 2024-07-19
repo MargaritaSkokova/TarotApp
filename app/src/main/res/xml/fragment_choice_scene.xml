@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+    <Transition
+        android:id="@+id/daily_to_love"
+        app:constraintSetEnd="@+id/center_love"
+        app:constraintSetStart="@id/center_daily"
+        app:duration="1000">
+        <OnSwipe
+            app:dragDirection="dragLeft"
+            app:onTouchUp="autoComplete" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/love_to_daily"
+        app:constraintSetEnd="@+id/center_daily"
+        app:constraintSetStart="@id/center_love"
+        app:duration="1000">
+        <OnSwipe
+            app:dragDirection="dragRight"
+            app:onTouchUp="autoComplete"/>
+    </Transition>
+
+    <Transition
+        android:id="@+id/return_love_to_daily"
+        app:constraintSetEnd="@+id/center_daily"
+        app:constraintSetStart="@id/center_love"
+        app:duration="1000">
+        <OnClick
+            app:clickAction="transitionToEnd"
+            app:targetId="@+id/back_button" />]
+    </Transition>
+
+    <Transition
+        android:id="@+id/return_work_to_daily"
+        app:constraintSetEnd="@+id/center_daily"
+        app:constraintSetStart="@id/center_work"
+        app:duration="1000">
+        <OnClick
+            app:clickAction="transitionToEnd"
+            app:targetId="@+id/back_button" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/return_weekly_to_daily"
+        app:constraintSetEnd="@+id/center_daily"
+        app:constraintSetStart="@id/center_weekly"
+        app:duration="1000">
+        <OnClick
+            app:clickAction="transitionToEnd"
+            app:targetId="@+id/back_button" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/return_ask_to_daily"
+        app:constraintSetEnd="@+id/center_daily"
+        app:constraintSetStart="@id/center_ask_your_question"
+        app:duration="1000">
+        <OnClick
+            app:clickAction="transitionToEnd"
+            app:targetId="@+id/back_button" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/daily_center_deck"
+        app:constraintSetEnd="@+id/deck_daily"
+        app:constraintSetStart="@id/center_daily"
+        app:duration="500">
+        <OnClick
+            app:clickAction="transitionToEnd"
+            app:targetId="@+id/button_choice" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/undo_daily_center_deck"
+        app:constraintSetEnd="@id/center_daily"
+        app:constraintSetStart="@+id/deck_daily"
+        app:duration="500">
+        <OnClick
+            app:clickAction="transitionToEnd"
+            app:targetId="@+id/back_button" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/love_center_deck"
+        app:constraintSetEnd="@+id/deck_love"
+        app:constraintSetStart="@id/center_love"
+        app:duration="500">
+        <OnClick
+            app:clickAction="transitionToEnd"
+            app:targetId="@+id/button_choice" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/undo_love_center_deck"
+        app:constraintSetEnd="@id/center_love"
+        app:constraintSetStart="@+id/deck_love"
+        app:duration="500">
+        <OnClick
+            app:clickAction="transitionToEnd"
+            app:targetId="@+id/back_button" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/work_center_deck"
+        app:constraintSetEnd="@+id/deck_work"
+        app:constraintSetStart="@id/center_work"
+        app:duration="500">
+        <OnClick
+            app:clickAction="transitionToEnd"
+            app:targetId="@+id/button_choice" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/undo_work_center_deck"
+        app:constraintSetEnd="@id/center_work"
+        app:constraintSetStart="@+id/deck_work"
+        app:duration="500">
+        <OnClick
+            app:clickAction="transitionToEnd"
+            app:targetId="@+id/back_button" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/weekly_center_deck"
+        app:constraintSetEnd="@+id/deck_weekly"
+        app:constraintSetStart="@id/center_weekly"
+        app:duration="500">
+        <OnClick
+            app:clickAction="transitionToEnd"
+            app:targetId="@+id/button_choice" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/undo_weekly_center_deck"
+        app:constraintSetEnd="@id/center_weekly"
+        app:constraintSetStart="@+id/deck_weekly"
+        app:duration="500">
+        <OnClick
+            app:clickAction="transitionToEnd"
+            app:targetId="@+id/back_button" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/ask_center_deck"
+        app:constraintSetEnd="@+id/deck_ask_your_question"
+        app:constraintSetStart="@id/center_ask_your_question"
+        app:duration="500">
+        <OnClick
+            app:clickAction="transitionToEnd"
+            app:targetId="@+id/button_choice" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/undo_ask_center_deck"
+        app:constraintSetEnd="@id/center_ask_your_question"
+        app:constraintSetStart="@+id/deck_ask_your_question"
+        app:duration="500">
+        <OnClick
+            app:clickAction="transitionToEnd"
+            app:targetId="@+id/back_button" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/love_to_ask"
+        app:constraintSetEnd="@+id/center_ask_your_question"
+        app:constraintSetStart="@id/center_love"
+        app:duration="1000">
+        <OnSwipe
+            app:dragDirection="dragLeft"
+            app:onTouchUp="autoComplete" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/ask_to_love"
+        app:constraintSetStart="@+id/center_ask_your_question"
+        app:constraintSetEnd="@id/center_love"
+        app:duration="1000">
+        <OnSwipe
+            app:dragDirection="dragRight"
+            app:onTouchUp="autoComplete" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/daily_to_work"
+        app:constraintSetEnd="@+id/center_work"
+        app:constraintSetStart="@id/center_daily"
+        app:duration="1000">
+        <OnSwipe
+            app:dragDirection="dragRight"
+            app:onTouchUp="autoComplete" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/work_to_daily"
+        app:constraintSetStart="@+id/center_work"
+        app:constraintSetEnd="@id/center_daily"
+        app:duration="1000">
+        <OnSwipe
+            app:dragDirection="dragLeft"
+            app:onTouchUp="autoComplete" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/work_to_weekly"
+        app:constraintSetEnd="@+id/center_weekly"
+        app:constraintSetStart="@id/center_work"
+        app:duration="1000">
+        <OnSwipe
+            app:dragDirection="dragRight"
+            app:onTouchUp="autoComplete" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/weekly_to_work"
+        app:constraintSetStart="@+id/center_weekly"
+        app:constraintSetEnd="@id/center_work"
+        app:duration="1000">
+        <OnSwipe
+            app:dragDirection="dragLeft"
+            app:onTouchUp="autoComplete"/>
+    </Transition>
+
+    <Transition
+        android:id="@+id/ask_to_weekly"
+        app:constraintSetEnd="@+id/center_weekly"
+        app:constraintSetStart="@id/center_ask_your_question"
+        app:duration="1000">
+        <OnSwipe
+            app:dragDirection="dragLeft"
+            app:onTouchUp="autoComplete"/>
+    </Transition>
+
+    <Transition
+        android:id="@+id/weekly_to_ask"
+        app:constraintSetStart="@+id/center_weekly"
+        app:constraintSetEnd="@id/center_ask_your_question"
+        app:duration="1000">
+        <OnSwipe
+            app:dragDirection="dragRight"
+            app:onTouchUp="autoComplete"/>
+    </Transition>
+
+    <ConstraintSet>
+        <Constraint android:id="@+id/card_daily_reading">
+            <Transform
+                android:elevation="5dp"
+                android:rotationY="-180" />
+            <CustomAttribute
+                motion:attributeName="Crossfade"
+                motion:customFloatValue="1" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_love_reading">
+            <Transform android:elevation="4dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_work_reading">
+            <Transform android:elevation="4dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_weekly_reading">
+            <Transform android:elevation="3dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_ask_your_question">
+            <Transform android:elevation="3dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/button_choice">
+            <CustomAttribute
+                motion:attributeName="Text"
+                motion:customStringValue="Choose" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/center_daily">
+
+        <Constraint android:id="@+id/button_choice">
+            <CustomAttribute
+                motion:attributeName="Text"
+                motion:customStringValue="More" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_daily_reading">
+            <Layout
+                android:layout_width="232dp"
+                android:layout_height="400dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="5dp"
+                android:rotation="0" />
+            <CustomAttribute
+                motion:attributeName="Crossfade"
+                motion:customFloatValue="0" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_love_reading">
+            <Layout
+                android:layout_width="162dp"
+                android:layout_height="270dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="410dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="4dp"
+                android:rotationY="40" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_work_reading">
+            <Layout
+                android:layout_width="162dp"
+                android:layout_height="270dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="410dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="4dp"
+                android:rotationY="-40" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_weekly_reading">
+            <Layout
+                android:layout_width="90dp"
+                android:layout_height="150dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="3dp"
+                android:rotationY="-130" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_ask_your_question">
+            <Layout
+                android:layout_width="90dp"
+                android:layout_height="150dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="3dp"
+                android:rotationY="130" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/deck_love">
+        <Constraint android:id="@+id/card_daily_reading">
+            <Transform android:elevation="4dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_love_reading">
+            <Transform android:elevation="5dp"
+                android:rotationY="-180"/>
+            <CustomAttribute
+                motion:attributeName="Crossfade"
+                motion:customFloatValue="1" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_work_reading">
+            <Transform android:elevation="3dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_weekly_reading">
+            <Transform android:elevation="2dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_ask_your_question">/>
+            <Transform android:elevation="4dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/button_choice">
+            <CustomAttribute
+                motion:attributeName="Text"
+                motion:customStringValue="Choose" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/deck_daily">
+        <Constraint android:id="@+id/card_love_reading_reading">
+            <Transform android:elevation="4dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_daily_reading">
+            <Transform android:elevation="5dp"
+                android:rotationY="-180"/>
+            <CustomAttribute
+                motion:attributeName="Crossfade"
+                motion:customFloatValue="1" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_work_reading">
+            <Transform android:elevation="4dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_weekly_reading">
+            <Transform android:elevation="3dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_ask_your_question">/>
+            <Transform android:elevation="3dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/button_choice">
+            <CustomAttribute
+                motion:attributeName="Text"
+                motion:customStringValue="Choose" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/center_love">
+
+        <Constraint android:id="@+id/button_choice">
+            <CustomAttribute
+                motion:attributeName="Text"
+                motion:customStringValue="More" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_love_reading">
+            <Layout
+                android:layout_width="232dp"
+                android:layout_height="400dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="5dp"
+                android:rotation="0" />
+            <CustomAttribute
+                motion:attributeName="Crossfade"
+                motion:customFloatValue="0" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_ask_your_question">
+            <Layout
+                android:layout_width="162dp"
+                android:layout_height="270dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="410dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="4dp"
+                android:rotationY="40" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_daily_reading">
+            <Layout
+                android:layout_width="162dp"
+                android:layout_height="270dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="410dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="4dp"
+                android:rotationY="-40" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_work_reading">
+            <Layout
+                android:layout_width="90dp"
+                android:layout_height="150dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="3dp"
+                android:rotationY="-130" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_weekly_reading">
+            <Layout
+                android:layout_width="90dp"
+                android:layout_height="150dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="3dp"
+                android:rotationY="130" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/deck_work">
+        <Constraint android:id="@+id/card_work_reading">
+            <Transform android:elevation="5dp"
+                android:rotationY="-180"/>
+            <CustomAttribute
+                motion:attributeName="Crossfade"
+                motion:customFloatValue="1" />
+        </Constraint>
+        <Constraint android:id="@+id/card_daily_reading">
+            <Transform android:elevation="4dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_love_reading">
+            <Transform android:elevation="3dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_weekly_reading">
+            <Transform android:elevation="4dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_ask_your_question">
+            <Transform android:elevation="2dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/button_choice">
+            <CustomAttribute
+                motion:attributeName="Text"
+                motion:customStringValue="Choose" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/center_work">
+
+        <Constraint android:id="@+id/button_choice">
+            <CustomAttribute
+                motion:attributeName="Text"
+                motion:customStringValue="More" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_work_reading">
+            <Layout
+                android:layout_width="232dp"
+                android:layout_height="400dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="5dp"
+                android:rotation="0" />
+            <CustomAttribute
+                motion:attributeName="Crossfade"
+                motion:customFloatValue="0" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_daily_reading">
+            <Layout
+                android:layout_width="162dp"
+                android:layout_height="270dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="410dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="4dp"
+                android:rotationY="40" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_weekly_reading">
+            <Layout
+                android:layout_width="162dp"
+                android:layout_height="270dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="410dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="4dp"
+                android:rotationY="-40" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_ask_your_question">
+            <Layout
+                android:layout_width="90dp"
+                android:layout_height="150dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="3dp"
+                android:rotationY="-130" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_love_reading">
+            <Layout
+                android:layout_width="90dp"
+                android:layout_height="150dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="3dp"
+                android:rotationY="130" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/deck_weekly">
+        <Constraint android:id="@+id/card_weekly_reading">
+            <Transform android:elevation="5dp"
+                android:rotationY="-180"/>
+            <CustomAttribute
+                motion:attributeName="Crossfade"
+                motion:customFloatValue="1" />
+        </Constraint>
+        <Constraint android:id="@+id/card_work_reading">
+            <Transform android:elevation="4dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_daily_reading">
+            <Transform android:elevation="3dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_ask_your_question">
+            <Transform android:elevation="2dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_love_reading">
+            <Transform android:elevation="1dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/button_choice">
+            <CustomAttribute
+                motion:attributeName="Text"
+                motion:customStringValue="Choose" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/center_weekly">
+
+        <Constraint android:id="@+id/button_choice">
+            <CustomAttribute
+                motion:attributeName="Text"
+                motion:customStringValue="More" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_weekly_reading">
+            <Layout
+                android:layout_width="232dp"
+                android:layout_height="400dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="5dp"
+                android:rotation="0" />
+            <CustomAttribute
+                motion:attributeName="Crossfade"
+                motion:customFloatValue="0" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_work_reading">
+            <Layout
+                android:layout_width="162dp"
+                android:layout_height="270dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="410dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="4dp"
+                android:rotationY="40" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_ask_your_question">
+            <Layout
+                android:layout_width="162dp"
+                android:layout_height="270dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="410dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="4dp"
+                android:rotationY="-40" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_love_reading">
+            <Layout
+                android:layout_width="90dp"
+                android:layout_height="150dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="3dp"
+                android:rotationY="-130" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_daily_reading">
+            <Layout
+                android:layout_width="90dp"
+                android:layout_height="150dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="3dp"
+                android:rotationY="130" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/deck_ask_your_question">
+        <Constraint android:id="@+id/card_love_reading">
+            <Transform android:elevation="4dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_ask_your_question">
+            <Transform android:elevation="5dp"
+                android:rotationY="-180"/>
+            <CustomAttribute
+                motion:attributeName="Crossfade"
+                motion:customFloatValue="1" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_daily_reading">
+            <Transform android:elevation="3dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_weekly_reading">
+            <Transform android:elevation="1dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_work_reading">
+            <Transform android:elevation="2dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/button_choice">
+            <CustomAttribute
+                motion:attributeName="Text"
+                motion:customStringValue="Choose" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/center_ask_your_question">
+
+        <Constraint android:id="@+id/button_choice">
+            <CustomAttribute
+                motion:attributeName="Text"
+                motion:customStringValue="More" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_ask_your_question">
+            <Layout
+                android:layout_width="232dp"
+                android:layout_height="400dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="5dp"
+                android:rotation="0" />
+            <CustomAttribute
+                motion:attributeName="Crossfade"
+                motion:customFloatValue="0" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_weekly_reading">
+            <Layout
+                android:layout_width="162dp"
+                android:layout_height="270dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="410dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="4dp"
+                android:rotationY="40" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_love_reading">
+            <Layout
+                android:layout_width="162dp"
+                android:layout_height="270dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="410dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="4dp"
+                android:rotationY="-40" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_daily_reading">
+            <Layout
+                android:layout_width="90dp"
+                android:layout_height="150dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="3dp"
+                android:rotationY="-130" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card_work_reading">
+            <Layout
+                android:layout_width="90dp"
+                android:layout_height="150dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:elevation="3dp"
+                android:rotationY="130" />
+        </Constraint>
+    </ConstraintSet>
+
+</MotionScene>

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="seed">#594671</color>
+    <color name="original_light_violet_blue">#39365A</color>
+    <color name="original_navy_dark">#221E3E</color>
+    <color name="original_navy_dark_transparent">#C3221E3E</color>
+    <color name="original_pink_daft">#73506D</color>
+    <color name="original_pink_dark">#66486E</color>
     <color name="md_theme_light_primary">#714D9F</color>
     <color name="md_theme_light_onPrimary">#FFFFFF</color>
     <color name="md_theme_light_primaryContainer">#EEDCFF</color>
@@ -18,7 +23,7 @@
     <color name="md_theme_light_onError">#FFFFFF</color>
     <color name="md_theme_light_onErrorContainer">#410002</color>
     <color name="md_theme_light_background">#FEFBFF</color>
-    <color name="md_theme_light_onBackground">#001849</color>
+    <color name="md_theme_light_onBackground">#0D214A</color>
     <color name="md_theme_light_surface">#FEFBFF</color>
     <color name="md_theme_light_onSurface">#001849</color>
     <color name="md_theme_light_surfaceVariant">#E8E0EB</color>
@@ -31,7 +36,7 @@
     <color name="md_theme_light_surfaceTint">#714D9F</color>
     <color name="md_theme_light_outlineVariant">#CCC4CF</color>
     <color name="md_theme_light_scrim">#000000</color>
-    <color name="md_theme_dark_primary">#D9B9FF</color>
+    <color name="md_theme_dark_primary">#BDA5BF</color>
     <color name="md_theme_dark_onPrimary">#401B6D</color>
     <color name="md_theme_dark_primaryContainer">#583485</color>
     <color name="md_theme_dark_onPrimaryContainer">#EEDCFF</color>
@@ -47,7 +52,7 @@
     <color name="md_theme_dark_errorContainer">#93000A</color>
     <color name="md_theme_dark_onError">#690005</color>
     <color name="md_theme_dark_onErrorContainer">#FFDAD6</color>
-    <color name="md_theme_dark_background">#001849</color>
+    <color name="md_theme_dark_background">#443078</color>
     <color name="md_theme_dark_onBackground">#DBE1FF</color>
     <color name="md_theme_dark_surface">#001849</color>
     <color name="md_theme_dark_onSurface">#DBE1FF</color>
@@ -61,4 +66,7 @@
     <color name="md_theme_dark_surfaceTint">#D9B9FF</color>
     <color name="md_theme_dark_outlineVariant">#4A454E</color>
     <color name="md_theme_dark_scrim">#000000</color>
+    <color name="status_bar">#1D2947</color>
+    <color name="card">#805779</color>
+    <color name="light_gray">#787878</color>
 </resources>

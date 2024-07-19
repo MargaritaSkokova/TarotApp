@@ -9,5 +9,82 @@
         android:id="@+id/welcomeFragment"
         android:name="com.example.tarotapp.WelcomeFragment"
         android:label="WelcomeFragment"
-        tools:layout="@layout/fragment_welcome" />
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_lobbyFragment"
+            app:destination="@id/lobbyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/choiceFragment"
+        android:name="com.example.tarotapp.ChoiceFragment"
+        android:label="fragment_choice"
+        tools:layout="@layout/fragment_choice">
+        <action
+            android:id="@+id/action_choiceFragment_to_readingFragment"
+            app:destination="@id/readingFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popUpTo="@id/choiceFragment" />
+        <action
+            android:id="@+id/action_choiceFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popUpTo="@id/choiceFragment" />
+        <action
+            android:id="@+id/action_choiceFragment_to_lobbyFragment"
+            app:destination="@id/lobbyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/readingFragment"
+        android:name="com.example.tarotapp.ReadingFragment"
+        android:label="fragment_reading"
+        tools:layout="@layout/fragment_reading">
+        <action
+            android:id="@+id/action_readingFragment_to_tarotReadingFragment"
+            app:destination="@id/tarotReadingFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popUpTo="@id/lobbyFragment" />
+        <argument
+            android:name="reading_type"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/tarotReadingFragment"
+        android:name="com.example.tarotapp.TarotReadingFragment"
+        android:label="fragment_tarot_reading"
+        tools:layout="@layout/fragment_tarot_reading" >
+        <argument
+            android:name="reading_type"
+            app:argType="string" />
+        <argument
+            android:name="number_cards"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_tarotReadingFragment_to_lobbyFragment"
+            app:destination="@id/lobbyFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popUpTo="@id/lobbyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.tarotapp.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_lobbyFragment"
+            app:destination="@id/lobbyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lobbyFragment"
+        android:name="com.example.tarotapp.LobbyFragment"
+        android:label="fragment_lobby"
+        tools:layout="@layout/fragment_lobby" >
+        <action
+            android:id="@+id/action_lobbyFragment_to_choiceFragment"
+            app:destination="@id/choiceFragment"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_lobbyFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
 </navigation>
