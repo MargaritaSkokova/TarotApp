@@ -2,9 +2,14 @@
 <resources>
     <color name="seed">#594671</color>
     <color name="original_light_violet_blue">#39365A</color>
+    <color name="original_light_blue">#54507A</color>
+    <color name="original_light_blue_transparent">#C254507A</color>
+    <color name="original_light_violet_blue_transparent">#C239365A</color>
     <color name="original_navy_dark">#221E3E</color>
     <color name="original_navy_dark_transparent">#C3221E3E</color>
     <color name="original_pink_daft">#73506D</color>
+    <color name="original_pink_daft_transparent">#C273506D</color>
+    <color name="original_text_color">#D7C9DC</color>
     <color name="original_pink_dark">#66486E</color>
     <color name="md_theme_light_primary">#714D9F</color>
     <color name="md_theme_light_onPrimary">#FFFFFF</color>

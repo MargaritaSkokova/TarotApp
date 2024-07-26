@@ -2,8 +2,12 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/almendra</item>
+        <item>@font/blinker</item>
+        <item>@font/blinker_extralight</item>
+        <item>@font/blinker_light</item>
         <item>@font/cormorant_light</item>
         <item>@font/cormorant_medium</item>
+        <item>@font/krub_light</item>
         <item>@font/maitree_medium</item>
         <item>@font/nova_slim</item>
     </array>

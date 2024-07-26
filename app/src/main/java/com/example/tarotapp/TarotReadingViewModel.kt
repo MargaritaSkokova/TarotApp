@@ -19,7 +19,6 @@ class TarotReadingViewModel : ViewModel() {
     var isReadingDone = false
     lateinit var readingObject: Pair<List<CardsImages>, List<String>>
 
-    @RequiresApi(Build.VERSION_CODES.O)
     fun getCardsByReading(readingType: String, numberCardsToChose: Int): Pair<List<CardsImages>, List<String>> {
         val cards: MutableList<CardsImages> = mutableListOf()
         val numbersUsed: MutableList<Int> = mutableListOf()

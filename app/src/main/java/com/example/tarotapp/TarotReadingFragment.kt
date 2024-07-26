@@ -17,7 +17,6 @@ class TarotReadingFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var viewModel: TarotReadingViewModel
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

@@ -20,7 +20,6 @@ class InformationRepository private constructor(context: Context) {
         InformationDatabase::class.java,
         "InformationDb"
     ).addCallback(object : RoomDatabase.Callback() {
-        @RequiresApi(Build.VERSION_CODES.O)
         override fun onCreate(db: SupportSQLiteDatabase) {
             super.onCreate(db)
             db.execSQL("INSERT INTO profile VALUES ('${UUID.randomUUID()}','username', '${LocalDate.now()}', '${LocalDate.of(1970, 1, 1)}', null)")
@@ -118,7 +117,6 @@ class InformationRepository private constructor(context: Context) {
         return entity
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
     fun didThisWeekHaveReading(): Boolean {
         val wow = WeekFields.of(Locale.getDefault()).weekOfYear()
         val today = LocalDate.now()

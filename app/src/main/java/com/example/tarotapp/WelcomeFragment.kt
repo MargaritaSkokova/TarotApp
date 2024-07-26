@@ -24,13 +24,6 @@ class WelcomeFragment : Fragment() {
     ): View? {
         _binding = FragmentWelcomeBinding.inflate(inflater, container, false)
         val view = binding.root
-//        binding.welcomeStartButton.setOnClickListener {
-//            view.findNavController().navigate(R.id.action_welcomeFragment_to_choiceFragment)
-//        }
-//
-//        binding.welcomeProfileButton.setOnClickListener {
-//            view.findNavController().navigate(R.id.action_welcomeFragment_to_profileFragment)
-//        }
 
         val textAnim = binding.textShine
 

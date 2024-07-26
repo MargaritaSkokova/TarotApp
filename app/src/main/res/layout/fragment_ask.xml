@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:fontFamily="@font/cormorant_medium"
+            android:fontFamily="@font/blinker_extralight"
             android:textColor="@color/md_theme_dark_onPrimaryContainer"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"

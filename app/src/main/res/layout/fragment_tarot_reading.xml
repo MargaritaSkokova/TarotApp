@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/portrait_back_outlined_stars"
     android:orientation="vertical"
-    android:background="@drawable/back_space"
     tools:context=".TarotReadingFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -60,41 +60,58 @@
         android:textColor="#D7C9DC"
         android:textSize="52sp" />
 
-    <ScrollView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp">
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/card_round_light"
             android:orientation="vertical"
-            tools:layout_editor_absoluteX="16dp">
+            app:layout_constraintBottom_toTopOf="@+id/back_start_bitton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/text_meaning"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
-                android:background="#977064B3"
-                android:fontFamily="@font/cormorant_medium"
+                android:fontFamily="@font/blinker_extralight"
                 android:text=""
                 android:textAlignment="gravity"
                 android:textColor="#D7C9DC"
                 android:textSize="40sp" />
-
-            <Button
-                android:id="@+id/back_start_bitton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="@font/cinzel"
-                android:text="@string/back_start_button"
-                android:layout_marginBottom="15dp"
-                android:textSize="26sp"
-                />
-
+            </ScrollView>
         </LinearLayout>
-    </ScrollView>
+
+        <Button
+            android:id="@+id/back_start_bitton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/cinzel"
+            android:text="@string/back_start_button"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </LinearLayout>
